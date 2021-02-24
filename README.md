@@ -3,17 +3,26 @@
   # Visually Explaining the Weight Distribution of Neural Networks Over Time<h1>
 
 This repository contains the source code for [_explAIner_](https://www.researchgate.net/publication/344719862_Visually_Explaining_the_Weight_Distribution_of_Neural_Networks_Over_Time) -- the framework for explainable AI and interactive machine learning.
+The aim is to make use of intrinsic features to come up with a domain, data, and model independent method. 
+
+## Feature Space
+To eplain the ML models at fundamental levels, there is possibility of exploring various factors in feature space including bias,weights, activation function, inputs or the back prorgation of error.Amongst all these weights hold a direct corelation with model performance, accruacy, inputs as well as outputs. Thus visualizing single feature can have multiple findings.Refer to the reserach article for detailed info.
 
 
 ## Architecture
 
 The framework consists of four plugins, which represent the _stages of explanation_, namely
 
-* Understanding
-* mpact of regression on models  
-* Diagnosis
+* Extracting Weights
+* Weights Preprocessing
+* Non temporal distance analysis 
+* Agglomerative clustering
+* Diagnosis using Viusialzation
 * Refinement
+* Hypothesis formaiton
 * Reporting
+<! --- * Impact of regression on models  --- !>
+
 
 
 ## Repository Structure
