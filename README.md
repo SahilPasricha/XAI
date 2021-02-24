@@ -11,14 +11,14 @@ To explain the ML models at fundamental levels, there is possibility of explorin
 
 The framework consists of 8 steps, which represent the _stages of explanation_, namely
 <p align = "center">
-  <a href = "#ExtractingWeights">Extracting Weights</a>
-  <a href = "#Weights Preprocessing">Weights Preprocessing</a>
-  <a href = "#DTW">Non temporal distance analysis </a>
-  <a href = "#Clustering">Agglomerative clustering</a>
-  <a href = "#viz">Diagnosis using Visualization</a>
-  <a href = "#Refine">Refinement</a>
-  <a href = "#Hypothesis">Hypothesis Testing</a>
-  <a href = "#Reporting">Reporting</a>
+  <a href = "#ExtractingWeights">Extracting Weights</a><br>
+  <a href = "#Weights Preprocessing">Weights Preprocessing</a><br>
+  <a href = "#DTW">Non temporal distance analysis </a><br>
+  <a href = "#Clustering">agglomerative clustering clustering</a><br>
+  <a href = "#viz">Diagnosis using Visualization</a><br>
+  <a href = "#Refine">Refinement</a><br>
+  <a href = "#Hypothesis">Hypothesis Testing</a><br>
+  <a href = "#Reporting">Reporting</a><br>
 </p>
 
 ``` Add to it later Impact of regression on models```
@@ -27,10 +27,9 @@ The framework consists of 8 steps, which represent the _stages of explanation_, 
 
 ## Repository Structure
 
-### Folders 
 The repository contains 4 folders:
 
-* `backend/`
+* `backend/`  <a name="ExtractingWeights"></a>(#ExtractingWeights)
   This folder contains the python backend for the tensorflow core (model in-/output) alternatiions.
       * `_1_callbacks/`  
         These core Tensorflow files and need manual integration with relevant TF version.
