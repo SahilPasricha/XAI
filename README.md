@@ -1,8 +1,6 @@
-# XAI
-  
-  # Visually Explaining the Weight Distribution of Neural Networks Over Time<h1>
+# eXplainable Artificial Intelligence: Visually Explaining the Weight Distribution of Neural Networks Over Time<h1>
 
-This repository contains the source code for [_explAIner_](https://www.researchgate.net/publication/344719862_Visually_Explaining_the_Weight_Distribution_of_Neural_Networks_Over_Time) -- the framework for explainable AI and interactive machine learning.
+This repository contains the source code for [_XAI_weights_disttribution_](https://www.researchgate.net/publication/344719862_Visually_Explaining_the_Weight_Distribution_of_Neural_Networks_Over_Time) -- the framework for explainable AI and interactive machine learning.
 The aim is to make use of intrinsic features to come up with a domain, data, and model independent method. 
 
 ## Feature Space
@@ -11,8 +9,10 @@ To eplain the ML models at fundamental levels, there is possibility of exploring
 
 ## Architecture
 
-The framework consists of four plugins, which represent the _stages of explanation_, namely
-
+The framework consists of 8 steps, which represent the _stages of explanation_, namely
+<p align = "center">
+  <a href = "#ExtractingWeights">Extracting Weights</a>
+</p>
 * Extracting Weights
 * Weights Preprocessing
 * Non temporal distance analysis 
