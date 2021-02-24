@@ -4,7 +4,7 @@ This repository contains the source code for [_XAI_weights_disttribution_](https
 The aim is to make use of intrinsic features to come up with a domain, data, and model independent method. 
 
 ## Feature Space
-To eplain the ML models at fundamental levels, there is possibility of exploring various factors in feature space including bias,weights, activation function, inputs or the back prorgation of error.Amongst all these weights hold a direct corelation with model performance, accruacy, inputs as well as outputs. Thus visualizing single feature can have multiple findings.Refer to the reserach article for detailed info.
+To explain the ML models at fundamental levels, there is possibility of exploring various factors in feature space including bias,weights, activation function, inputs or the back prorgation of error.Amongst all these weights hold a direct corelation with model performance, accruacy, inputs as well as outputs. Thus visualizing single feature can have multiple findings.Refer to the reserach article for detailed info.
 
 
 ## Architecture
@@ -12,16 +12,14 @@ To eplain the ML models at fundamental levels, there is possibility of exploring
 The framework consists of 8 steps, which represent the _stages of explanation_, namely
 <p align = "center">
   <a href = "#ExtractingWeights">Extracting Weights</a>
+  <a href = "#Weights Preprocessing">Weights Preprocessing</a>
+  <a href = "#DTW">Non temporal distance analysis </a>
+  <a href = "#Clustering">Agglomerative clustering</a>
+  <a href = "#viz">Diagnosis using Visualization</a>
+  <a href = "#Refine">Refinement</a>
+  <a href = "#Hypothesis">Hypothesis Testing</a>
+  <a href = "#Reporting">Reporting</a>
 </p>
-* Extracting Weights
-* Weights Preprocessing
-* Non temporal distance analysis 
-* Agglomerative clustering
-* Diagnosis using Viusialzation
-* Refinement
-* Hypothesis formaiton
-* Reporting
-
 
 ``` Add to it later Impact of regression on models```
 
@@ -33,32 +31,36 @@ The framework consists of 8 steps, which represent the _stages of explanation_, 
 The repository contains 4 folders:
 
 * `backend/`
-  This folder contains the python backend for the high-level (model in-/output) explanations.
-  
-  ```comment
- ML algo tweaked to publish weights with CNN and Auto encoders
-```
+  This folder contains the python backend for the tensorflow core (model in-/output) alternatiions.
+      * `_1_callbacks/`  
+        These core Tensorflow files and need manual integration with relevant TF version.
+        The purpose is to tweak the save_weights callback enabling weights extraction on every training step.
+         
 
 * `viz/`  
   This folder contains the actual visualization code. It has the following options:  
     * `_1_central_data_tendency/`  
-      Plugin for understanding. Data-independent explanations.
+      Plugin to sort, cluster and visualize model wights over training steps.
+      It supports features such as brush to zoom and offer variety of options to explore various aspects of weight data.
     * `_2_binning/`  
-      Plugin for diagnosis. Debugging of NN graph.
+       Clusters the weights in number of bins (selected by scroll bar) on the run.
+       Single click on given line further presents exploded view of weights inside bin till one line per weight
     * `_3_sorting/`  
-      Plugin for refinement. Recommendations on improvements.
+      As weights are dynamic and vary in development, there is no single sorting method that holds for all models. In viz their are options to sort weights.
     * `_4_dynamic_time_warping_agglomerative_clustering/`  
-      Plugin for reporting. Summarizes the findings from previous steps.
-    * `_5_location_tendency/`  
-      Parts that are used in more than one plugin.
-  * `knime/`  
-    The modified TensorBoard executable, with explAIner plugins injected.
-    
+      Performs DTW on weights to find records that have same pattern of development irrespective of training steps. Then, they are clustered using aglomerative algorithm 
 
+* `knime/`  
+    The KNIME tool pipeline to perform data cleansing and visualize the CDT of model weights.
+* `algorithms/`     
+    * `_1_dynamic_time_warping/`  
+      Plugin for calculating distance between weights in non temporal fashion 
+    * `_2_hierarchical_clustering/`  
+      Plugin for understanding. Data-independent explanations.
 
 ## Extracting weights from model at every training step
 
-Tensorflow supports weight extraction using .get_weights() but this extracts weights of last training step only.
+Tensorflow supports weight extraction using get_weights() but this extracts weights of last training step only.
 For this analysis, Weights througout the project are required and this can be done by writing a custom call back.
 
 
@@ -75,6 +77,3 @@ Although the containers should be up and running after a few seconds, it might t
 
 ## Citing this Repository
 To reference this repository, please cite the original explAIner publication (pre-print available on [_researchgate.org](https://www.researchgate.net/publication/344719862_Visually_Explaining_the_Weight_Distribution_of_Neural_Networks_Over_Time)):
-
-
-
