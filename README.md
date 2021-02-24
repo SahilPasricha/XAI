@@ -29,7 +29,7 @@ The framework consists of 8 steps, which represent the _stages of explanation_, 
 
 The repository contains 4 folders:
 
-* `backend/`  <a name="ExtractingWeights"></a>(#ExtractingWeights)
+* `backend/`  <a name="ExtractingWeights"></a>
   This folder contains the python backend for the tensorflow core (model in-/output) alternatiions.
       * `_1_callbacks/`  
         These core Tensorflow files and need manual integration with relevant TF version.
