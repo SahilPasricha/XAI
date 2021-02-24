@@ -21,7 +21,9 @@ The framework consists of four plugins, which represent the _stages of explanati
 * Refinement
 * Hypothesis formaiton
 * Reporting
-<! --- * Impact of regression on models  --- !>
+
+
+``` Add to it later Impact of regression on models```
 
 
 
@@ -72,23 +74,7 @@ docker-compose up --build --remove-orphans -d explainer_tensorboard
 Although the containers should be up and running after a few seconds, it might take a while until the code is fully compiled and the system gets available under `http://127.0.0.1:6006`.
 
 ## Citing this Repository
-To reference this repository, please cite the original explAIner publication (pre-print available on [_researchgate.org](https://arxiv.org/abs/1908.00087)):
+To reference this repository, please cite the original explAIner publication (pre-print available on [_researchgate.org](https://www.researchgate.net/publication/344719862_Visually_Explaining_the_Weight_Distribution_of_Neural_Networks_Over_Time)):
 
-```
-T. Spinner, U. Schlegel, H. Schafer, and M. El-Assady, “explAIner: A Visual Analytics Framework for Interactive and Explainable Machine Learning,” IEEE Trans. on Vis. and Computer Graphics, vol. 26, no. 1, Art. no. 1, 2020, doi: 10.1109/tvcg.2019.2934629.
-```
 
-### BibTeX
 
-```
-@ARTICLE{SpinnerEtAl2020,
-  author = {Thilo Spinner and Udo Schlegel and Hanna Schäfer and Mennatallah El-Assady},
-  title = {{explAIner}: A Visual Analytics Framework for Interactive and Explainable Machine Learning},
-  journal = {{IEEE} Transactions on Visualization and Computer Graphics},
-  year = {2020},
-  volume = {26},
-  number = {1},
-  pages = {1064-1074},
-  doi = {10.1109/TVCG.2019.2934629},
-}
-```
