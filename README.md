@@ -5,8 +5,9 @@ The aim is to make use of intrinsic features to come up with a domain, data, and
 
 ## Feature Space
 To explain the ML models at fundamental levels, there is possibility of exploring various factors in feature space including bias,weights, activation function, inputs or the back prorgation of error.Amongst all these weights hold a direct corelation with model performance, accruacy, inputs as well as outputs. Thus visualizing single feature can have multiple findings.Refer to the reserach article for detailed info.
-
-
+<p>
+<img src ="https://github.com/SahilPasricha/XAI/blob/main/Images/flow_chart.png">
+</p>
 ## Architecture
 
 The framework consists of 8 steps, which represent the _stages of explanation_, namely
@@ -86,6 +87,3 @@ Although the containers should be up and running after a few seconds, it might t
 
 ## Citing this Repository
 To reference this repository, please cite the original explAIner publication (pre-print available on [_researchgate.org](https://www.researchgate.net/publication/344719862_Visually_Explaining_the_Weight_Distribution_of_Neural_Networks_Over_Time)):
-
-
-
