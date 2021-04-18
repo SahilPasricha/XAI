@@ -1,0 +1,85 @@
+/*body {*/
+/*    background-color: lightgrey;*/
+/*}*/
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+div.infobox {
+    /*background-color: lightgrey;*/
+    width: 210px;
+    right: -80px;
+    border: 5px solid green;
+    padding: 5px;
+    margin: 5px;
+    float:right;
+
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+/* The Close Button */
+.close {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+.p {
+    font-size: inherit;
+    color: red;
+    border: initial;
+    padding: initial;
+    font-family: inherit;
+}
+
+div {
+    white-space: pre-wrap;
+}

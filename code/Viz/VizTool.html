@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XAI Weight Visualizaiton Tool</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.2.0/math.min.js"></script>
+    <link rel="stylesheet" href="mystyle.css">
+
+<!--why liens disapper after reg press and never go in sub bins ?-->
+
+
+
+</head>
+<body>
+
+<h1>
+    Weight Viz Tool for XAI
+</h1>
+<div class="infobox" id = "infobox">
+    <h2 id = "info_h2">Model Hierarchy</h2>
+    <p id = "info_model_name">Model -</p>
+    <p id = "info_layer_name">Layer -</p>
+    <p id = "info_ids">Ids - </p>
+    <p id = "info_epochs">Epochs - </p>
+    <p id = "info_bins">Number of Bins -</p>
+
+<!--    <p id = "info_bin_size">Bin Size -</p>-->
+    <p id = "info_layer_hierarchy">Layer Hierarchy-- </p>
+    <p id = "sd" style="display:inline;"> SD --><p style="color:#fa8364;display:inline;">Orig &ensp; &ensp;</p><p style="color:#a9ceea;display:inline;">Reg &ensp; &ensp;</p><p style="color:#b3b147;display:inline;">Mutual</p>
+    </p>
+</div>
+
+<p id="demo">Select the Dir for Weights</p>
+
+<p id = "warning_box"></p>
+
+<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<ul id="listing"></ul>
+
+<div id="myModal" class="modal">
+    <span class="close"></span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+<button onclick="showAcc()">Acc</button>
+<button onclick="showLoss()">Loss</button>
+<button onclick="showRecons()">Reconstrcuted Images</button>
+<button onclick="showCode()">Code</button>
+
+
+<form >
+    <label for="layerSelect">Choose a Layer:</label>
+    <select name="Layers" id="layerSelect" onchange="selectClicked(this)">
+    </select>
+    <br><br>
+<!--    <input type="submit" value="Submit" onclick="printRandom()">-->
+</form>
+
+
+
+
+<div id="my_dataviz"></div>
+
+<script src="myScript.js"></script>
+
+
+
+
+
+
+
+
+<textarea id = "code"></textarea>
+</body>
+</html>

@@ -1,0 +1,14 @@
+ /home/pasricha/jaan/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/network.py
+/home/pasricha/jaan/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/TempRegFunc.py
+/home/pasricha/jaan/lib/python3.7/site-packages/tensorflow_core/python/keras/callbacks.py
+/home/pasricha/jaan/keras_log-weights/models/kcifar100_desk.py
+/home/pasricha/jaan/keras_log-weights/models/cifar100_desk.py
+/home/pasricha/jaan/keras_log-weights/models/Dcifar100.py
+/home/pasricha/jaan/keras_log-weights/models/skip_cifar.py
+/home/pasricha/jaan/keras_log-weights/models/skip_cifar50.py
+/home/pasricha/jaan/keras_log-weights/tools/__init__.py
+/home/pasricha/jaan/keras_log-weights/tools/project_tools.py
+/home/pasricha/jaan/keras_log-weights/tools/.ipynb_checkpoints/project_tools-checkpoint.py
+home/pasricha/jaan/keras_log-weights/log/skip_cifar50/skip_cifar50.py
+/home/pasricha/WeightPredictions/RegFunc.py
+/home/pasricha/WeightPredictions/.ipynb_checkpoints/RegFunc-checkpoint.py
