@@ -30,9 +30,10 @@ def SimpLinearRegression(condensed_data, train_steps,predict_steps,file_path, re
         idLessRow = row[len(file.columns)-trainStep:].to_numpy()
         model = LinearRegression()
         model.fit(indepTrain.reshape(-1, 1), idLessRow.reshape(-1, 1))
-        print('coefficient of determination:', model.score(indepTrain.reshape(-1,1),idLessRow.reshape(-1,1)))
-        print('intercept:', model.intercept_)
-        print('slope:', model.coef_)
+        #print('coefficient of determination:', model.score(indepTrain.reshape(-1,1),idLessRow.reshape(-1,1)))
+        #print('intercept:', model.intercept_)
+        #print('slope:', model.coef_)
+        print("***********processing REGression****************")
 
         indepPrd = np.asarray([*(range(last_col+1, last_col+1+predStep))])
         weightsPred = model.predict(indepPrd.reshape(-1,1))
