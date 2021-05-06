@@ -66,7 +66,7 @@ class StoreWeights(tf.keras.callbacks.Callback):
 
             else:
                 df = pd.read_csv(file_path_name)
-                custom_epoch = int(df.columns[-1][-1])+1
+                custom_epoch = int(df.columns[-1].replace('Epoch:',''))+1
                 df['Epoch:' + str(custom_epoch)] = layer_weights_flatten
                 df.to_csv(file_path_name, index = False, header=True,float_format='%.3f')
 
@@ -85,10 +85,13 @@ class StoreWeights(tf.keras.callbacks.Callback):
                 #temporarilu store in new file , later to be stored in same file
                 unclust_reg_weights_file = unclus_reg_file_name_prefix + file_name_prefix + str(i).zfill(2) + file_name_suffix
                 reg_unclustered = uncluster_reg_weights(reg_data, new_headers, self.file_path, unclust_reg_weights_file)
+                reg_unclustered.reset_index(drop=True, inplace=True)
                 #later move REpoch to Epoch and add + r steps to eopchs
-                import pdb;pdb.set_trace()
+                #import pdb;pdb.set_trace()
+                #import pdb;pdb.set_trace()
                 df = pd.read_csv(file_path_name)
-                custom_epoch = int(reg_unclustered.columns[-1][-1])
+                custom_epoch = int(reg_unclustered.columns[-1].replace('Epoch:',''))
+
                 df['Epoch:' + str(custom_epoch)] = reg_unclustered[reg_unclustered.columns[-1]]
                 df.to_csv(file_path_name, index = False, header=True,float_format='%.3f')
 
@@ -98,11 +101,9 @@ class StoreWeights(tf.keras.callbacks.Callback):
                 for j in range(layer_weights_length):
                     ripe_weights_np[j] = ripe_weights[j*layer_weights_width:(j*layer_weights_width)+layer_weights_width]
                 all_layer_weights[i] = ripe_weights_np
-
+                #import pdb;pdb.set_trace()
                 # Feed weights back to network
                 self.model.set_weights(all_layer_weights)
-                print("temporary ")
-
 
 
     def on_epoch_end(self, epoch, logs={}):

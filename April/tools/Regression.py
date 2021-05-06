@@ -33,7 +33,6 @@ def SimpLinearRegression(condensed_data, train_steps,predict_steps,file_path, re
         #print('coefficient of determination:', model.score(indepTrain.reshape(-1,1),idLessRow.reshape(-1,1)))
         #print('intercept:', model.intercept_)
         #print('slope:', model.coef_)
-        print("***********processing REGression****************")
 
         indepPrd = np.asarray([*(range(last_col+1, last_col+1+predStep))])
         weightsPred = model.predict(indepPrd.reshape(-1,1))

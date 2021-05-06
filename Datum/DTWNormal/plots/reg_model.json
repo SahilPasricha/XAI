@@ -1,0 +1,67 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "id": "140623680368144",
+            "name": "flatten_1",
+            "cls_name": "Flatten",
+            "input_shape": [
+                null,
+                4,
+                4
+            ],
+            "output_shape": [
+                null,
+                16
+            ],
+            "num_parameters": 0
+        },
+        {
+            "id": "140623494176976",
+            "name": "dense_2",
+            "cls_name": "Dense",
+            "input_shape": [
+                null,
+                16
+            ],
+            "output_shape": [
+                null,
+                20
+            ],
+            "num_parameters": 340
+        },
+        {
+            "id": "140623493928784",
+            "name": "dense_3",
+            "cls_name": "Dense",
+            "input_shape": [
+                null,
+                20
+            ],
+            "output_shape": [
+                null,
+                10
+            ],
+            "num_parameters": 210
+        },
+        {
+            "id": "140623493930064"
+        }
+    ],
+    "links": [
+        {
+            "source": "140623680368144",
+            "target": "140623494176976"
+        },
+        {
+            "source": "140623494176976",
+            "target": "140623493928784"
+        },
+        {
+            "source": "140623493930064",
+            "target": "140623680368144"
+        }
+    ]
+}
