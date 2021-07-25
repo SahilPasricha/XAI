@@ -1,0 +1,112 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "id": "140621208606128",
+            "name": "conv2d",
+            "cls_name": "Conv2D",
+            "input_shape": [
+                null,
+                32,
+                32,
+                3
+            ],
+            "output_shape": [
+                null,
+                30,
+                30,
+                32
+            ],
+            "num_parameters": 896
+        },
+        {
+            "id": "140621310543280",
+            "name": "max_pooling2d",
+            "cls_name": "MaxPooling2D",
+            "input_shape": [
+                null,
+                30,
+                30,
+                32
+            ],
+            "output_shape": [
+                null,
+                15,
+                15,
+                32
+            ],
+            "num_parameters": 0
+        },
+        {
+            "id": "140621208607328",
+            "name": "flatten",
+            "cls_name": "Flatten",
+            "input_shape": [
+                null,
+                15,
+                15,
+                32
+            ],
+            "output_shape": [
+                null,
+                7200
+            ],
+            "num_parameters": 0
+        },
+        {
+            "id": "140621189002864",
+            "name": "dense",
+            "cls_name": "Dense",
+            "input_shape": [
+                null,
+                7200
+            ],
+            "output_shape": [
+                null,
+                32
+            ],
+            "num_parameters": 230432
+        },
+        {
+            "id": "140621189005168",
+            "name": "dense_1",
+            "cls_name": "Dense",
+            "input_shape": [
+                null,
+                32
+            ],
+            "output_shape": [
+                null,
+                10
+            ],
+            "num_parameters": 330
+        },
+        {
+            "id": "140621211625168"
+        }
+    ],
+    "links": [
+        {
+            "source": "140621208606128",
+            "target": "140621310543280"
+        },
+        {
+            "source": "140621310543280",
+            "target": "140621208607328"
+        },
+        {
+            "source": "140621208607328",
+            "target": "140621189002864"
+        },
+        {
+            "source": "140621189002864",
+            "target": "140621189005168"
+        },
+        {
+            "source": "140621211625168",
+            "target": "140621208606128"
+        }
+    ]
+}

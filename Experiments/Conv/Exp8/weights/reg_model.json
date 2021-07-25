@@ -1,0 +1,178 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "id": "140548668529616",
+            "name": "conv2d",
+            "cls_name": "Conv2D",
+            "input_shape": [
+                null,
+                32,
+                32,
+                3
+            ],
+            "output_shape": [
+                null,
+                30,
+                30,
+                32
+            ],
+            "num_parameters": 896
+        },
+        {
+            "id": "140548719574032",
+            "name": "max_pooling2d",
+            "cls_name": "MaxPooling2D",
+            "input_shape": [
+                null,
+                30,
+                30,
+                32
+            ],
+            "output_shape": [
+                null,
+                15,
+                15,
+                32
+            ],
+            "num_parameters": 0
+        },
+        {
+            "id": "140548651105872",
+            "name": "conv2d_1",
+            "cls_name": "Conv2D",
+            "input_shape": [
+                null,
+                15,
+                15,
+                32
+            ],
+            "output_shape": [
+                null,
+                13,
+                13,
+                64
+            ],
+            "num_parameters": 18496
+        },
+        {
+            "id": "140548650785040",
+            "name": "max_pooling2d_1",
+            "cls_name": "MaxPooling2D",
+            "input_shape": [
+                null,
+                13,
+                13,
+                64
+            ],
+            "output_shape": [
+                null,
+                6,
+                6,
+                64
+            ],
+            "num_parameters": 0
+        },
+        {
+            "id": "140548650837840",
+            "name": "conv2d_2",
+            "cls_name": "Conv2D",
+            "input_shape": [
+                null,
+                6,
+                6,
+                64
+            ],
+            "output_shape": [
+                null,
+                4,
+                4,
+                64
+            ],
+            "num_parameters": 36928
+        },
+        {
+            "id": "140548650785488",
+            "name": "flatten",
+            "cls_name": "Flatten",
+            "input_shape": [
+                null,
+                4,
+                4,
+                64
+            ],
+            "output_shape": [
+                null,
+                1024
+            ],
+            "num_parameters": 0
+        },
+        {
+            "id": "140548720455248",
+            "name": "dense",
+            "cls_name": "Dense",
+            "input_shape": [
+                null,
+                1024
+            ],
+            "output_shape": [
+                null,
+                64
+            ],
+            "num_parameters": 65600
+        },
+        {
+            "id": "140548650920720",
+            "name": "dense_1",
+            "cls_name": "Dense",
+            "input_shape": [
+                null,
+                64
+            ],
+            "output_shape": [
+                null,
+                10
+            ],
+            "num_parameters": 650
+        },
+        {
+            "id": "140548668529680"
+        }
+    ],
+    "links": [
+        {
+            "source": "140548668529616",
+            "target": "140548719574032"
+        },
+        {
+            "source": "140548719574032",
+            "target": "140548651105872"
+        },
+        {
+            "source": "140548651105872",
+            "target": "140548650785040"
+        },
+        {
+            "source": "140548650785040",
+            "target": "140548650837840"
+        },
+        {
+            "source": "140548650837840",
+            "target": "140548650785488"
+        },
+        {
+            "source": "140548650785488",
+            "target": "140548720455248"
+        },
+        {
+            "source": "140548720455248",
+            "target": "140548650920720"
+        },
+        {
+            "source": "140548668529680",
+            "target": "140548668529616"
+        }
+    ]
+}

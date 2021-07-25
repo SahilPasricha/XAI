@@ -1,0 +1,156 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "id": "140176908676288",
+            "name": "conv2d",
+            "cls_name": "Conv2D",
+            "input_shape": [
+                null,
+                28,
+                28,
+                1
+            ],
+            "output_shape": [
+                null,
+                26,
+                26,
+                2
+            ],
+            "num_parameters": 20
+        },
+        {
+            "id": "140176898930504",
+            "name": "max_pooling2d",
+            "cls_name": "MaxPooling2D",
+            "input_shape": [
+                null,
+                26,
+                26,
+                2
+            ],
+            "output_shape": [
+                null,
+                13,
+                13,
+                2
+            ],
+            "num_parameters": 0
+        },
+        {
+            "id": "140176898932016",
+            "name": "conv2d_1",
+            "cls_name": "Conv2D",
+            "input_shape": [
+                null,
+                13,
+                13,
+                2
+            ],
+            "output_shape": [
+                null,
+                11,
+                11,
+                4
+            ],
+            "num_parameters": 76
+        },
+        {
+            "id": "140176861604384",
+            "name": "max_pooling2d_1",
+            "cls_name": "MaxPooling2D",
+            "input_shape": [
+                null,
+                11,
+                11,
+                4
+            ],
+            "output_shape": [
+                null,
+                5,
+                5,
+                4
+            ],
+            "num_parameters": 0
+        },
+        {
+            "id": "140176861604776",
+            "name": "flatten",
+            "cls_name": "Flatten",
+            "input_shape": [
+                null,
+                5,
+                5,
+                4
+            ],
+            "output_shape": [
+                null,
+                100
+            ],
+            "num_parameters": 0
+        },
+        {
+            "id": "140176861605168",
+            "name": "dropout",
+            "cls_name": "Dropout",
+            "input_shape": [
+                null,
+                100
+            ],
+            "output_shape": [
+                null,
+                100
+            ],
+            "num_parameters": 0
+        },
+        {
+            "id": "140176861605504",
+            "name": "dense",
+            "cls_name": "Dense",
+            "input_shape": [
+                null,
+                100
+            ],
+            "output_shape": [
+                null,
+                10
+            ],
+            "num_parameters": 1010
+        },
+        {
+            "id": "140176902129144"
+        }
+    ],
+    "links": [
+        {
+            "source": "140176908676288",
+            "target": "140176898930504"
+        },
+        {
+            "source": "140176898930504",
+            "target": "140176898932016"
+        },
+        {
+            "source": "140176898932016",
+            "target": "140176861604384"
+        },
+        {
+            "source": "140176861604384",
+            "target": "140176861604776"
+        },
+        {
+            "source": "140176861604776",
+            "target": "140176861605168"
+        },
+        {
+            "source": "140176861605168",
+            "target": "140176861605504"
+        },
+        {
+            "source": "140176902129144",
+            "target": "140176908676288"
+        }
+    ]
+}
